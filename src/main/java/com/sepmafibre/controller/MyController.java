@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sepmafibre.model.Product;
@@ -22,7 +23,7 @@ public class MyController {
 	private ProductService productService;
 	
 	// display list of Products
-	@GetMapping("/")
+	@GetMapping("/secured")
 	public String viewHomePage(Model model) {
 		return findPaginated(1, "name", "asc", model);		
 	}
@@ -35,7 +36,7 @@ public class MyController {
 		return "new_product";
 	}
 	
-	@GetMapping("/home")
+	@RequestMapping("/home")
 	public String getHome() {
 		return "home";
 	}
@@ -106,7 +107,7 @@ public class MyController {
 		model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
 		
 		model.addAttribute("listProducts", listProducts);
-		return "index";
+		return "secured";
 	}
 	
 	
