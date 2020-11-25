@@ -15,7 +15,7 @@ public class EmailService {
 
     public void sendMail(String name, String email, String mobile, String body) {
 
-        var mailMessage = new SimpleMailMessage();
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
 
         mailMessage.setTo("sepmafibre@gmail.com");
         mailMessage.setSubject("Contact From "+name);
