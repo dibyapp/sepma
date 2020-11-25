@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.sepmafibre.model.Message;
 import com.sepmafibre.model.Product;
+import com.sepmafibre.service.EmailService;
 import com.sepmafibre.service.ProductService;
 
 @Controller
@@ -21,6 +23,9 @@ public class MyController {
 
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private EmailService emailService;
 	
 	// display list of Products
 	@GetMapping("/secured")
@@ -47,7 +52,9 @@ public class MyController {
 	}
 	
 	@GetMapping("/contact")
-	public String getContact() {
+	public String getContact(Model model) {
+		Message Message = new Message();
+		model.addAttribute("Message", Message);
 		return "contact";
 	}
 	
@@ -66,6 +73,12 @@ public class MyController {
 		// save Product to database
 		productService.saveProduct(Product);
 		return "redirect:/";
+	}
+
+	@PostMapping("/sendMail")
+	public String sendMail(@ModelAttribute("Message") Message Message) {
+		emailService.sendMail(Message.getName(), Message.getEmail(), Message.getMobile(), Message.getBody());
+		return "success";
 	}
 	
 	@GetMapping("/showFormForUpdate/{id}")
