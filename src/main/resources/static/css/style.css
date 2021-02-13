@@ -77,7 +77,7 @@ h6 {
 }
 
 h1 {
-	font-size: 24px
+	font-size: 40px
 }
 
 h2 {
@@ -238,7 +238,6 @@ button {
 	margin: 0;
 	padding: 0;
 }
-
 
 /**-- heading section --**/
 
@@ -464,11 +463,11 @@ nav.main-menu {
 
 .menu-area-main li:hover a,
 .menu-area-main li:focus a {
-	color: #ffc221;
+	color: #f43887;
 }
 
 .menu-area-main li.active a {
-	color: #ffc221;
+	color: #f43887;
 }
 
 .right_cart_section {
@@ -1644,7 +1643,7 @@ input[type="radio"] .styled:checked+label::after {
 
 
 .buy {
-background: #ffc221;
+background: #f43887;
 padding: 7px 41px !important;
 margin-top: 18px;
 border-radius: 5px;
@@ -1656,7 +1655,7 @@ float: right;
 	color: #fff;
 }
 
-.head_top {background: #ffc221;
+.head_top {background: #f43887;
 margin-bottom: 35px;
 }
 ul.sociel_link {
@@ -1724,7 +1723,7 @@ font-size: 18px;
 	 }
 .banner-main .carousel-caption a {
     width: 250px;
-background: #ffc221;
+background: #f43887;
 padding: 9px 0px;
 color: #fff;
 font-size: 17px;
@@ -1737,7 +1736,7 @@ margin-top: 20px;
 .banner-main .carousel-caption a:hover {
 	background: #000;
 }
-.yellow_bold {color: #ffc221;}
+.yellow_bold {color: #f43887;}
 
 /** whyschose section **/
 
@@ -1756,7 +1755,7 @@ margin-top: 20px;
 .title h2 {
 	font-size: 50px;
 	line-height: 55px;
-	color:#ffc221;
+	color:#f43887;
 	font-weight: 500;
 	text-transform: uppercase;
     margin-bottom: 27px;
@@ -1786,7 +1785,7 @@ margin-top: 20px;
 }
 
 .choose_bg {
-	background: #f9be20;
+	background: #f43887;
 }
 
 
@@ -1890,7 +1889,7 @@ margin-top: 40px;
 .product .title h2 {
 	font-size: 50px;
 	line-height: 55px;
-	color:#ffc221;
+	color:#f43887;
 	font-weight: 500;
 	text-transform: uppercase;
     margin-bottom: 27px;
@@ -2001,7 +2000,7 @@ margin-top: 20px;
 	background: #0c0505;
 }
 
-.yellow_bg {background: #ffc221; 
+.yellow_bg {background: #f43887;
 	padding: 40px 30px; 
 	margin-top: 100px;
 }
@@ -2122,11 +2121,11 @@ ul.lik li a {
 }
 
 ul.lik li a:hover {
-	color: #ffc221;
+	color: #f43887;
 }
 
 .copyright {
-	background-color: #ffc221;
+	background-color: #f43887;
 	padding: 20px 0px;
 	margin-top: 70px;
 }
@@ -2154,7 +2153,7 @@ ul.lik li a:hover {
 
 
 .brand_color {
-     background-color: #ffc221;
+     background-color: #f43887;
 }
 .brand_color .titlepage {
      margin-top: 70px;
@@ -2180,7 +2179,7 @@ text-align: center;
 } 
 
 .form-control {
-     border: #ffc221 solid 2px;
+     border: #f43887 solid 2px;
      border-radius: inherit;
      margin-bottom: 30px;
      padding: 13px 20px;
@@ -2188,12 +2187,12 @@ text-align: center;
 }
 .form-control:focus {
      box-shadow: inherit;
-     border: #ffc221 solid 2px !important;
+     border: #f43887 solid 2px !important;
 }
 
 .textarea {
      font-family: poppins;
-     border: #ffc221 solid 2px;
+     border: #f43887 solid 2px;
      margin-bottom: 30px;
      padding: 13px 20px;
      width: 100%;
@@ -2213,7 +2212,7 @@ text-align: center;
 }
 
 .send:hover {
-     background: #ffc221;
+     background: #f43887;
 }
 
 
@@ -2350,7 +2349,7 @@ text-align: center;
 #main_slider .carousel-control-next:hover,
 #main_slider .carousel-control-prev:focus,
 #main_slider .carousel-control-next:focus {
-	background: #ffc221;
+	background: #f43887;
 	color: #fff;
 }
 

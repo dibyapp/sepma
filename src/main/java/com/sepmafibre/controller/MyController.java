@@ -128,7 +128,7 @@ public class MyController {
 			@RequestParam("sortField") String sortField,
 			@RequestParam("sortDir") String sortDir,
 			Model model) {
-		int pageSize = 5;
+		int pageSize = 10;
 		
 		Page<Product> page = productService.findPaginated(pageNo, pageSize, sortField, sortDir);
 		List<Product> listProducts = page.getContent();
@@ -142,6 +142,9 @@ public class MyController {
 		model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
 		
 		model.addAttribute("listProducts", listProducts);
+		System.out.println(listProducts);
+		System.out.println(page.getSize());
+		System.out.println(page.getNumberOfElements());
 		return "product";
 	}
 }

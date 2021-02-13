@@ -64,15 +64,7 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-						<div class="full">
-							<div class="center-desk">
-								<div class="logo">
-									<a href="/home"><img src="images/logo.jpg" alt="logo" /></a>
-								</div>
-							</div>
-						</div>
-					</div>
+									<h1><strong class="yellow_bold">SepmaFibre</strong></h1>
 					<div class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
 						<div class="menu-area">
 							<div class="limit-box">
@@ -127,12 +119,34 @@
 		<div class="product-bg-white">
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12"   th:each="product:${listProducts}">
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12"  th:each="product:${listProducts}">
 						<div class="product-box">
 							<i><img th:src='${product.image}'/></i>
 							<h3 th:text="${product.name}"></h3>
 							<span th:text="${product.description}"></span>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div th:if = "${totalPages > 1}">
+				<div class = "row col-sm-10">
+					<div class = "col-sm-2">
+						Total Rows: [[${totalItems}]]
+					</div>
+					<div class = "col-sm-1">
+					<span th:each="i: ${#numbers.sequence(1, totalPages)}">
+						<a th:if="${currentPage != i}" th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+						<span th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
+					</span>
+					</div>
+					<div class = "col-sm-1">
+						<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
+						<span th:unless="${currentPage < totalPages}">Next</span>
+					</div>
+
+					<div class="col-sm-1">
+						<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
+						<span th:unless="${currentPage < totalPages}">Last</span>
 					</div>
 				</div>
 			</div>
